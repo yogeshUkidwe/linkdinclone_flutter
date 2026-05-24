@@ -47,7 +47,7 @@ class ChatScreenState extends State<ChatScreen> {
           ChatAiProfile(
             network: widget.product,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
