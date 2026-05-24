@@ -30,21 +30,13 @@ class ChatScreenState extends State<ChatScreen> {
   final TextEditingController messageController1 = TextEditingController();
   bool isLoading = false;
 
+  @override
   void initState() {
     Provider.of<MainPageTransaction>(context, listen: false).productDetail =
         widget.product.description!;
     super.initState();
   }
 
-  void _handleSubmittedMessage() async {
-    final messageText = messageController.text;
-    if (messageText.isNotEmpty) {
-      setState(() {
-        messages.add(messageText);
-        messageController.clear();
-      });
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
